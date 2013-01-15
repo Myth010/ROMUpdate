@@ -25,6 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".path2"
+            	android:label="@string/path2">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                		android:value="com.myth.romupdater.MainActivity" />
+        </activity>
+        <activity android:name=".path1"
+            android:label="@string/path1">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                		android:value="com.myth.romupdater.MainActivity" />
+        </activity>
        </application>
 
 </manifest>

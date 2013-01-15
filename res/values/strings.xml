@@ -5,6 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="button1">Set download path</string>
+    <string name="path1">/sdcard/Download/</string>
+    <string name="path2">/sdcard/0ROMS/</string>
+    <string name="path3">/sdcard/ROMS/</string>
+    <string name="path4">Custom download path</string>
     <string name="romname">Select your rom</string>
 	<string name="rom1">Cyanogenmod</string>
 	<string name="rom1link">http://</string>
@@ -13,6 +17,7 @@
 	<string name="rom3">Xylon</string>
 	<string name="rom3link">http://</string>
 	<string-array name="roms">
+	    <item>Select rom</item>
 	    <item>Cyanogenmod</item>
 	    <item>AOKP</item>
 	    <item>Xylon</item>
