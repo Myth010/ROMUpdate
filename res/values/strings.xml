@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ROM Updater</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="button1">Set download path</string>
+    <string name="romname">Select your rom</string>
+	<string name="rom1">Cyanogenmod</string>
+	<string name="rom1link">http://</string>
+	<string name="rom2">AOKP</string>
+	<string name="rom2link">http://</string>
+	<string name="rom3">Xylon</string>
+	<string name="rom3link">http://</string>
+	<string-array name="roms">
+	    <item>Cyanogenmod</item>
+	    <item>AOKP</item>
+	    <item>Xylon</item>
+	</string-array>
+</resources>
