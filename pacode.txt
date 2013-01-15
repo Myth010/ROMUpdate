@@ -1,0 +1,89 @@
+Sub Process_Globals
+End Sub
+Sub Globals
+	Dim ListView1 As ListView
+	Dim ListView2 As ListView
+	Dim Updates As Button
+	Dim Themes As Button
+	Dim Back As Button
+	Dim ListView_ItemClick1 As Button
+	Dim Url1 As String
+	Dim Url2 As String
+	Dim Url3 As String
+	Dim Url4 As String
+	Dim Url5 As String
+	Dim Url6 As String
+	Dim PA1 As Button
+	Dim HC1 As HttpClient
+	Dim WebView1 As WebView
+
+	
+End Sub
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout1")
+	
+	
+	
+End Sub
+Sub Activity_Resume
+End Sub
+Sub Activity_Pause (UserClosed As Boolean)
+End Sub
+Sub Activity_Touch (Action As Int, X As Float, Y As Float)	
+End Sub
+Sub Updates_Click
+	Msgbox("Choose your desired Version","PA Updates")
+		Activity.LoadLayout("Layout2")
+			ListView1.Initialize("ListView1")
+		For Version = 1 To 6
+			ListView1.AddSingleLine("PA-2.99-" & Version)
+		Next
+			ListView1.AddSingleLine("Development-Builds")
+			
+			Activity.AddView(ListView1, 0, 100, 100%x, 90%y)
+			
+		
+End Sub
+Sub BackBTN_Click
+	Activity.LoadLayout("Layout1")
+End Sub
+Sub Themes_Click
+	WebView1.Initialize("Webview1")
+	WebView1.loadUrl("xda-developers.com")
+End Sub
+Sub ListView1_ItemClick (Position As Int, Value As Object)
+		Select Position
+	Case 0
+			WebView1.Initialize("WebView1")
+			WebView1.LoadUrl("http://goo.im/devs/paranoidandroid/roms/maguro/pa_maguro-2.99.1-21NOV2012-235528.zip")
+			Msgbox("Please Wait 10 Seconds","Download Starting")	
+	Case 1
+			Msgbox("HAHA there is no build 2 on the server! ;P", "Trolled")
+	Case 2  
+			WebView1.Initialize("WebView1")
+			WebView1.LoadUrl("http://goo.im/devs/paranoidandroid/roms/maguro/pa_maguro-2.99.3-25NOV2012-095252.zip")
+			Msgbox("Please Wait 10 Seconds","Download Starting")
+			
+	Case 3
+			WebView1.Initialize("WebView1")
+			WebView1.LoadUrl("http://goo.im/devs/paranoidandroid/roms/maguro/pa_maguro-2.99.4-27NOV2012-103033.zip")
+			Msgbox("Please Wait 10 Seconds","Download Starting")
+	Case 4
+			WebView1.Initialize("WebView1")
+			WebView1.LoadUrl("http://goo.im/devs/paranoidandroid/roms/maguro/pa_maguro-2.99.5-27NOV2012-180316.zip")
+			Msgbox("Please Wait 10 Seconds","Download Starting")
+	Case 5
+			WebView1.Initialize("WebView1")
+			WebView1.LoadUrl("http://goo.im/devs/paranoidandroid/roms/maguro/pa_maguro-2.99.6-01DIC2012-114156.zip")
+			Msgbox("Please Wait 10 Seconds","Download Starting")
+	Case 6  
+			WebView1.Initialize("WebView1")
+			Activity.LoadLayout("Layout3")
+			ListView2.Initialize("Listview2")
+			Activity.AddView(ListView2, 0, 100, 100%x, 90%y)
+		
+		End Select
+		Activity.AddView(WebView1, 0, 0, 100%x, 20%y)
+		
+	
+End Sub
