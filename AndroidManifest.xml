@@ -35,6 +35,11 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 		android:value="com.myth.romupdater.MainActivity" />
         </activity>
+		<activity android:name=".mainsettings"
+            android:label="@string/menu_settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.myth.romupdater.MainActivity" />
+        </activity>
        </application>
 
 </manifest>

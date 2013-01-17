@@ -4,6 +4,7 @@
     <string name="app_name">ROM Updater</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+	<string name="themeoption">Check to choose dark theme</string>
     <string name="button1">Set download path</string>
     <string name="path1">/sdcard/Download/</string>
     <string name="path2">/sdcard/0ROMS/</string>
