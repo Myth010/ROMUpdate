@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.AdapterView;
@@ -22,7 +23,27 @@ public class MainActivity extends Activity implements OnMenuItemClickListener
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		final Button button2 = (Button) findViewById(R.id.button2);
+		
+		button2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				String command[]={"su", "-c", "ls /data"};
+				Shell shell = new Shell();
+				String text = shell.sendShellCommand(command);
+				setNewTextInTextView(text);
+				
+			}
+		});
 	}
+	public void setNewTextInTextView(String text) {
+		TextView tv = new TextView(this);
+		tv.setText(text);
+		setContentView(tv);
+	}
+	
 
 
 	public boolean onCreateOptionsMenu(Menu menu)
