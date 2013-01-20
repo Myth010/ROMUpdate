@@ -28,5 +28,12 @@
         android:entries="@array/roms"
         android:hint="@string/romname"
         android:spinnerMode="dropdown" />
+        
+    <Button 
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:text="@string/button2"    />
 
 </RelativeLayout>
