@@ -25,25 +25,9 @@ public class MainActivity extends Activity implements OnMenuItemClickListener
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		final Button button2 = (Button) findViewById(R.id.button2);
 		
-		button2.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				String command[]={"su", "-c", "ls /data"};
-				Shell shell = new Shell();
-				String text = shell.sendShellCommand(command);
-				setNewTextInTextView(text);
-				
-			}
-		});
 	}
-	public void setNewTextInTextView(String text) {
-		TextView tv = new TextView(this);
-		tv.setText(text);
-		setContentView(tv);
-	}
+
 	
 
 
@@ -64,6 +48,15 @@ public class MainActivity extends Activity implements OnMenuItemClickListener
 			default:
 			    return super.onOptionsItemSelected(item);
 		}
+	}
+	@Override
+	public void rootCheck(View v) {
+		/* This will check for root and enable us to use su commands
+		 to pass a command with su privileges use:
+		 String command[]={"su", "-c", "command"}; */
+		String command[]={"su"};
+		Shell shell = new Shell();
+		String text = shell.sendShellCommand(command);
 	}
 	public void pathPopup(View view)
 	{
@@ -87,6 +80,15 @@ public class MainActivity extends Activity implements OnMenuItemClickListener
 	            startActivity(action2);
 	            return true;
 			case R.id.menu_settings:
+			    Intent intent = new Intent(this, mainsettings.class);
+				startActivity(intent);
+				return true;
+	        default:
+	            return false;
+	    }
+	}
+}
+ings:
 			    Intent intent = new Intent(this, mainsettings.class);
 				startActivity(intent);
 				return true;

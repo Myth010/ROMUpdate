@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner"
+		android:onClick="rootCheck"
         android:text="@string/button2"    />
 
 </RelativeLayout>
