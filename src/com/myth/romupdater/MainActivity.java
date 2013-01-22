@@ -88,12 +88,4 @@ public class MainActivity extends Activity implements OnMenuItemClickListener
 	    }
 	}
 }
-ings:
-			    Intent intent = new Intent(this, mainsettings.class);
-				startActivity(intent);
-				return true;
-	        default:
-	            return false;
-	    }
-	}
-}
+
